@@ -31,8 +31,10 @@ func main() {
 	for _, file := range files {
 		err := ConvGBK2UTF8(file)
 		if err != nil {
-			fmt.Printf("convert [%v] from GBK to UTF8 failed. %v\n", err.Error())
+			fmt.Printf("convert [%v] from GBK to UTF8 failed. %v\n", file, err.Error())
 			allok = false
+		} else {
+			fmt.Printf("convert [%v] from GBK to UTF8 OK.\n", file)
 		}
 	}
 	
@@ -98,7 +100,19 @@ func LookupFiles(dir, pattern string) ([]string, error) {
 
 func usage() {
 	fmt.Printf("usage : %v <pattern>\n", os.Args[0])
-	fmt.Printf("Example 1: %v *.cc\n", os.Args[0])
-	fmt.Printf("Example 2: %v *\n", os.Args[0])
-	fmt.Printf("Example 3: %v dir/*\n", os.Args[0])
+	s := `
+gbk2utf8 is a tool that will convert a file from GBK encoding to UTF-8 encoding
+in position and backup the origin file with a extention file ".bak". Here below
+are some simple usage:
+
+gbk2utf8
+	This will convert all files in curent dir and subdirs.
+
+gbk2utf8 *.cc
+	This will convert all *.cc files in curent dir.
+
+gbk2utf8 somedir/*
+	This will convert all *files in somedir and its subdirs
+`
+	fmt.Printf(s)
 }
