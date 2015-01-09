@@ -1,3 +1,6 @@
+# Put this content to file ~/.gdb/nginx_view.gdb
+# Execute command after gdb startup : source ~/.gdb/nginx_view.gdb
+
 define pnarr
      if $argc == 0
          help pnarr
