@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/da2/weizili/qdev/CloudSrv/trunk/nginx/url/outchain/etc/etc.latest/conf_seprotect'
+let g:netrw_dirhist_2='/home/s'
+let g:netrw_dirhist_3='/da2/weizili/qdev/CloudMobile/trunk/callapp/callapp_engine/src/rule'
+let g:netrw_dirhist_4='/da2/weizili/qdev/CloudMobile/trunk/callapp/callapp_engine/ut/test/gasucs/etc'
+let g:netrw_dirhist_5='/da2/weizili/qdev/CloudSrv/trunk/nginx/internal-tools-module/tutorial/t/udp'
+let g:netrw_dirhist_6='/da2/weizili/workspace/muduo.zieckey/muduo/rpm'
+let g:netrw_dirhist_7='/da2/weizili/workspace/condiment/unixstudycode/cmake/chapter4-2/build/ToDoCore/unit_test/CMakeFiles'
+let g:netrw_dirhist_8='/usr/include/c++/4.4.4'
+let g:netrw_dirhist_9='/da2/weizili/qdev/CloudSrv/trunk/cloudcom/src/netproto/include'
