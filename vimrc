@@ -32,8 +32,10 @@ filetype plugin on
 autocmd FileType c,cpp,py,h,cxx,hxx,hpp,cc,php,CC,C set shiftwidth=4 | set expandtab
 
 au! BufRead,BufNewFile *.thrift setfiletype thrift
-au! BufRead,BufNewFile *.json set filetype=json
+au! BufRead,BufNewFile *.json setfiletype json
+au! BufRead,BufNewFile *.proto setfiletype proto
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
 
 set fileformats=unix,mac,dos
 "set fileencodings=utf8,gb1803,gbk,cp936,iso-8859-1

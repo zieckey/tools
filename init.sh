@@ -1,4 +1,6 @@
 
+# Execute this script at the dir where it is
+
 TOOLS=$HOME/workspace/tools
 
 ln -s $TOOLS/vim $HOME/.vim
