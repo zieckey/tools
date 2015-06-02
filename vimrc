@@ -34,6 +34,7 @@ autocmd FileType c,cpp,py,h,cxx,hxx,hpp,cc,php,CC,C set shiftwidth=4 | set expan
 au! BufRead,BufNewFile *.thrift setfiletype thrift
 au! BufRead,BufNewFile *.json setfiletype json
 au! BufRead,BufNewFile *.proto setfiletype proto
+au! BufRead,BufNewFile *.go setfiletype go
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 
