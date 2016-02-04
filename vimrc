@@ -41,3 +41,9 @@ autocmd FileType go autocmd BufWritePre <buffer> Fmt
 set fileformats=unix,mac,dos
 "set fileencodings=utf8,gb1803,gbk,cp936,iso-8859-1
 
+call pathogen#infect()
+
+syntax enable
+filetype plugin on
+"set number
+let g:go_disable_autoinstall = 0
