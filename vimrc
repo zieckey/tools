@@ -35,7 +35,7 @@ au! BufRead,BufNewFile *.thrift setfiletype thrift
 au! BufRead,BufNewFile *.json setfiletype json
 au! BufRead,BufNewFile *.proto setfiletype proto
 au! BufRead,BufNewFile *.go setfiletype go
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
+"autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 
 set fileformats=unix,mac,dos
