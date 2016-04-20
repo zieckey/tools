@@ -29,7 +29,7 @@ set nocp
 filetype plugin on
 
 "using 4 space to substitute TAB
-autocmd FileType c,cpp,py,h,cxx,hxx,hpp,cc,php,CC,C set shiftwidth=4 | set expandtab
+autocmd FileType c,cpp,py,h,cxx,hxx,hpp,cc,php,CC,C,go set shiftwidth=4 | set expandtab
 
 au! BufRead,BufNewFile *.thrift setfiletype thrift
 au! BufRead,BufNewFile *.json setfiletype json
