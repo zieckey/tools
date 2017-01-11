@@ -26,3 +26,5 @@
 *.exe
 *.out
 *.app
+
+astyle-2.06/build/gcc/bin/
