@@ -47,3 +47,5 @@ syntax enable
 filetype plugin on
 "set number
 let g:go_disable_autoinstall = 0
+
+"let Tlist_Ctags_Cmd=/home/weizili/bin/ctags
