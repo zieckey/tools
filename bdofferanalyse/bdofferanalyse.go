@@ -249,19 +249,4 @@ func joinToString(dateSet* treeset.Set) string {
 
 func usage() {
 	fmt.Printf("usage : %v filename\n", os.Args[0])
-	s := `
-gbk2utf8 is a tool that will convert a file from GBK encoding to UTF-8 encoding
-in position and backup the origin file with a extention file ".bak". Here below
-are some simple usage:
-
-gbk2utf8
-	This will convert all files in curent dir and subdirs.
-
-gbk2utf8 *.cc
-	This will convert all *.cc files in curent dir.
-
-gbk2utf8 somedir/*
-	This will convert all *files in somedir and its subdirs
-`
-	fmt.Printf(s)
 }
