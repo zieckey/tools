@@ -67,6 +67,10 @@ func main()  {
 			words[i] = strings.TrimSpace(w)
 		}
 
+		// 过滤掉 撤销、审批不通过 的offer
+		if words[10] != "已同意" {
+			continue
+		}
 
 		// 检查第8列，并获取时间字段
 		const dateIndex = 8
