@@ -19,6 +19,7 @@ const outsourcing = "外包"
 const socialRecruitment = "社招"
 const oncampusRecruitment = "校招"
 const fullTime = "全职"
+const internalSocialRecruitment = "内推社招"
 
 /*
 数据结构
@@ -28,7 +29,7 @@ const fullTime = "全职"
 					"外包": 5,
 					"实习": 3,
 					"校招": 4,
-					"社招招": 6
+					"社招": 6
 				}
 }
 
@@ -84,9 +85,8 @@ func main()  {
 		log.Printf("Year month = %v\n", yearMonth)
 
 
-		//检查第四列，并获取类型
+		//检查第四列，并获取offer类型
 		offerType := getOfferType(words[4], words[6])
-
 
 		kv, ok := result[yearMonth]
 		if !ok {
@@ -109,6 +109,14 @@ func main()  {
 			kv[source] = 0
 		}
 		kv[source] = kv[source] + 1
+
+		//技术内推社招offer数量
+		if source == "内部渠道" && offerType == socialRecruitment {
+			if _, ok := kv[internalSocialRecruitment]; !ok {
+				kv[internalSocialRecruitment] = 0
+			}
+			kv[internalSocialRecruitment] = kv[internalSocialRecruitment] + 1
+		}
 	}
 
 	for k, v := range result {
@@ -214,6 +222,7 @@ Data|London = 3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8
 // 参数：
 // 岗位名称，例如 后台开发实习生
 // 职级，例如 2-1
+// return offer类型
 func getOfferType(jobName string, rank string) string {
 	log.Printf("job=[%v] rank=[%v]\n", jobName, rank)
 	if strings.Contains(jobName, intern) {
