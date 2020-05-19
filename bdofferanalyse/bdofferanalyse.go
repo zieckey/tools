@@ -261,5 +261,6 @@ func joinToString(dateSet* treeset.Set) string {
 
 
 func usage() {
-	fmt.Printf("usage : %v filename\n", os.Args[0])
+	fmt.Printf("usage : %v offer-filename.csv\n", os.Args[0])
+	fmt.Printf("下载offer文件，另存为csv文件。然后运行这个程序，会生成一个 offer.chart 文件。最后 gochart 工具绘图，用浏览器打开即可查看。 http://localhost:8000/ 。\n")
 }
